@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour {
 	public Transform Player;
 	public Transform launchpad;
 
+    public Death death;
+
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody2D> ();
@@ -52,5 +54,10 @@ public class Movement : MonoBehaviour {
 		if (other.gameObject.tag == "LaunchPad") {
 			rigidBody.velocity = new Vector2 (rigidBody.velocity.x, launchSpeed);
 		}
+
+        if (other.gameObject.tag == "KillBox"){
+            death.restart();
+            Debug.Log("restart");
+        }
 	}
 }

@@ -29,7 +29,6 @@ public class PlatformGenerator : MonoBehaviour {
 	void Update () {
 		if(transform.position.y < generationPoint.position.y)
         {
-            Debug.Log("hui");
             float distance = Random.Range(distanceMin, distanceMax);
             float offset = Random.Range(-10.0f, 10.0f);
             float xPos = transform.position.x + offset;
