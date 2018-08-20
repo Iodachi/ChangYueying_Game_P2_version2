@@ -15,6 +15,9 @@ public class PlatformGenerator : MonoBehaviour {
 
     private int platformSelector;
 
+    public float spike;
+    public ObjectPooler spikePool;
+
     // Use this for initialization
     void Start(){
         platformWidths = new float[objectPools.Length];
@@ -27,7 +30,7 @@ public class PlatformGenerator : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(transform.position.y < generationPoint.position.y)
+        if (transform.position.y < generationPoint.position.y)
         {
             float distance = Random.Range(distanceMin, distanceMax);
             float offset = Random.Range(-10.0f, 10.0f);
@@ -36,14 +39,23 @@ public class PlatformGenerator : MonoBehaviour {
                 xPos = transform.position.x;
             platformSelector = Random.Range(0, objectPools.Length);
 
-            transform.position = new Vector3(xPos, transform.position.y + platformWidths[platformSelector]+ distance, transform.position.z);
+            transform.position = new Vector3(xPos, transform.position.y + platformWidths[platformSelector] + distance, transform.position.z);
             //Instantiate(platform, transform.position, transform.rotation);
             GameObject newPlaform = objectPools[platformSelector].getPooledObject();
             newPlaform.transform.position = transform.position;
             newPlaform.transform.rotation = transform.rotation;
             newPlaform.SetActive(true);
 
-
+            if (Random.Range(0f, 10f) < spike)
+            {
+                GameObject newSpike = spikePool.getPooledObject();
+                float spikeOffset = Random.Range(-1f, 1f);
+                float newSpikeX = transform.position.x + spikeOffset;
+                float newSpikeY = transform.position.y + 0.5f;
+                newSpike.transform.position = new Vector3(newSpikeX, newSpikeY, transform.position.z);
+                newSpike.transform.rotation = transform.rotation;
+                newSpike.SetActive(true);
+            }
         }
 	}
 }
