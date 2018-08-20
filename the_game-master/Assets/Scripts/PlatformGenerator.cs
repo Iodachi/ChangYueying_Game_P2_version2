@@ -18,6 +18,9 @@ public class PlatformGenerator : MonoBehaviour {
     public float spike;
     public ObjectPooler spikePool;
 
+    public float launchpad;
+    public ObjectPooler launchpadPool;
+
     // Use this for initialization
     void Start(){
         platformWidths = new float[objectPools.Length];
@@ -55,6 +58,17 @@ public class PlatformGenerator : MonoBehaviour {
                 newSpike.transform.position = new Vector3(newSpikeX, newSpikeY, transform.position.z);
                 newSpike.transform.rotation = transform.rotation;
                 newSpike.SetActive(true);
+            }
+
+            if (Random.Range(0f, 10f) < launchpad)
+            {
+                GameObject newLaunchpad = launchpadPool.getPooledObject();
+                float launchpadOffset = Random.Range(-1f, 1f);
+                float newLaunchpadX = transform.position.x + launchpadOffset;
+                float newLaunchpadY = transform.position.y + 0.7f;
+                newLaunchpad.transform.position = new Vector3(newLaunchpadX, newLaunchpadY, transform.position.z);
+                newLaunchpad.transform.rotation = transform.rotation;
+                newLaunchpad.SetActive(true);
             }
         }
 	}
