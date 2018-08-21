@@ -56,7 +56,7 @@ public class Movement : MonoBehaviour {
 		}
 
         if (other.gameObject.tag == "KillBox"){
-            death.restart();
+            //death.restart();
             Debug.Log("restart");
         }
 	}

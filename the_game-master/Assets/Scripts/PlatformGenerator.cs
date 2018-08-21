@@ -21,6 +21,9 @@ public class PlatformGenerator : MonoBehaviour {
     public float launchpad;
     public ObjectPooler launchpadPool;
 
+    public float gems;
+    public ObjectPooler[] gemsPools;
+
     // Use this for initialization
     void Start(){
         platformWidths = new float[objectPools.Length];
@@ -69,6 +72,17 @@ public class PlatformGenerator : MonoBehaviour {
                 newLaunchpad.transform.position = new Vector3(newLaunchpadX, newLaunchpadY, transform.position.z);
                 newLaunchpad.transform.rotation = transform.rotation;
                 newLaunchpad.SetActive(true);
+            }
+
+            if (Random.Range(0f, 10f) < gems)
+            {
+                int gemSelector = Random.Range(0, gemsPools.Length);
+                GameObject newGem = gemsPools[gemSelector].getPooledObject();
+                float gemOffset = Random.Range(0f, 3f);
+                float newGemY = transform.position.y + gemOffset;
+                newGem.transform.position = new Vector3(transform.position.x, newGemY, transform.position.z);
+                newGem.transform.rotation = transform.rotation;
+                newGem.SetActive(true);
             }
         }
 	}
