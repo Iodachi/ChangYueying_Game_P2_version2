@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LaunchPad
   - KillBox
+  - Spike
   layers:
   - Default
   - TransparentFX

@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4123949806897588}
   - component: {fileID: 212976809374038078}
   - component: {fileID: 60883056371340396}
+  - component: {fileID: 114861967600817374}
+  - component: {fileID: 114591247490332918}
   m_Layer: 0
   m_Name: Yellowgem
   m_TagString: Untagged
@@ -158,6 +160,33 @@ PolygonCollider2D:
       - {x: 0.099999994, y: -5.3399997}
       - {x: 0.29, y: -5.19}
       - {x: 0.39999998, y: -5.1}
+--- !u!114 &114591247490332918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346151221481914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e8745de11494c40aeb7315e1c39eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincible: 1
+  cameraSpeedDown: 0
+  superJump: 0
+  length: 5
+--- !u!114 &114861967600817374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346151221481914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898ce3a255c9cb34eaa77a96cae0d89d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 1346151221481914}
 --- !u!212 &212976809374038078
 SpriteRenderer:
   m_ObjectHideFlags: 1

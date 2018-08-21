@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour {
 	public Transform launchpad;
 
     public Death death;
+    public bool safe;
 
 	// Use this for initialization
 	void Start () {
@@ -56,8 +57,13 @@ public class Movement : MonoBehaviour {
 		}
 
         if (other.gameObject.tag == "KillBox"){
-            //death.restart();
-            Debug.Log("restart");
+            death.restart();
+        }
+
+        if(other.gameObject.tag == "Spike"){
+            if(!safe){
+                death.restart();
+            }
         }
 	}
 }

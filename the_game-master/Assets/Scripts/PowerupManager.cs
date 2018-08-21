@@ -12,10 +12,12 @@ public class PowerupManager : MonoBehaviour {
     private float length;
 
     public CameraController cam;
+    public Movement player;
 
 	// Use this for initialization
 	void Start () {
         cam = FindObjectOfType<CameraController>();
+        player = FindObjectOfType<Movement>();
 	}
 	
 	// Update is called once per frame
@@ -25,20 +27,22 @@ public class PowerupManager : MonoBehaviour {
 
             if (invincible)
             {
-
+                player.safe = true;
             }
             else if (cameraSpeedDown)
             {
                 cam.speed = 0.02f;
             }
             else if(superJump){
-                
+                player.jumpSpeed = 25;
             }
         }
 
         if(length <= 0){
             active = false;
             cam.speed = 0.05f;
+            player.jumpSpeed = 15;
+            player.safe = false;
         }
 	}
 

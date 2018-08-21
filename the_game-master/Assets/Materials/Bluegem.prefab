@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212270297069674628}
   - component: {fileID: 114463098772719202}
   - component: {fileID: 60757819520768494}
+  - component: {fileID: 114105569920782692}
   m_Layer: 0
   m_Name: Bluegem
   m_TagString: Untagged
@@ -115,6 +116,18 @@ PolygonCollider2D:
       - {x: 0.074999996, y: -3.97}
       - {x: 0.265, y: -3.82}
       - {x: 0.375, y: -3.73}
+--- !u!114 &114105569920782692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317674656977078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898ce3a255c9cb34eaa77a96cae0d89d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 1317674656977078}
 --- !u!114 &114463098772719202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,7 +139,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e8745de11494c40aeb7315e1c39eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  invincible: 0
+  cameraSpeedDown: 1
+  superJump: 0
+  length: 5
 --- !u!212 &212270297069674628
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4328700537097958}
   - component: {fileID: 212744213919576612}
   - component: {fileID: 60609218235805022}
+  - component: {fileID: 114630130566932108}
+  - component: {fileID: 114510082128413874}
   m_Layer: 0
   m_Name: purplegem
   m_TagString: Untagged
@@ -126,6 +128,33 @@ PolygonCollider2D:
       - {x: 0.205, y: -3.5149999}
       - {x: 0.315, y: -3.425}
       - {x: 0.48499998, y: -3.2749999}
+--- !u!114 &114510082128413874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853546717836536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e8745de11494c40aeb7315e1c39eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincible: 0
+  cameraSpeedDown: 0
+  superJump: 1
+  length: 5
+--- !u!114 &114630130566932108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1853546717836536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898ce3a255c9cb34eaa77a96cae0d89d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformDestructionPoint: {fileID: 1853546717836536}
 --- !u!212 &212744213919576612
 SpriteRenderer:
   m_ObjectHideFlags: 1
