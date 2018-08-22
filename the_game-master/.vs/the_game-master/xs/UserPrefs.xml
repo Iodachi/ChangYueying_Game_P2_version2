@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{FFC54807-8BDF-FED2-5A1F-209119493441}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PowerupManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Movement.cs">
     <Files>
       <File FileName="Assets/Scripts/Death.cs" Line="39" Column="9" />
       <File FileName="Assets/Scripts/Movement.cs" Line="65" Column="31" />
